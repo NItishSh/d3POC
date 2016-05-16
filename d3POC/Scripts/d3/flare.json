@@ -1,0 +1,86 @@
+{  
+   "Project":"IFS-AD",
+   "Team":"Bollywood Team",
+   "Epics":[
+    {
+      "name": "Epic name",
+      "Id": "1",
+      "type": "Epic",
+      "size": "",
+      "status": "",      
+      "children": [
+        {
+          "name": "PBI one.",
+          "Id": "1",
+          "type": "Product Backlog item",
+          "size": "5",
+          "status": "Done",          
+          "children": [
+
+          ]
+        },
+        {
+          "name": "PBI two.",
+          "Id": "2",
+          "type": "Product Backlog item",
+          "size": "5",
+          "status": "ToDo",          
+          "children": [
+
+          ]
+        },
+        {
+          "name": "PBI three.",
+          "Id": "3",
+          "type": "Product Backlog item",
+          "size": "5",
+          "status": "In Progress",
+          
+          "children": [
+
+          ]
+        },
+        {
+          "name": "PBI four.",
+          "Id": "4",
+          "type": "Product Backlog item",
+          "size": "13",
+          "status": "Done",          
+          "children": [
+
+          ]
+        },
+        {
+          "name": "PBI five.",
+          "Id": "5",
+          "type": "Product Backlog item",
+          "size": "5",
+          "status": "Done",          
+          "children": [
+
+          ]
+        },
+        {
+          "name": "PBI six.",
+          "Id": "6",
+          "type": "Product Backlog item",
+          "size": "5",
+          "status": "ToDo",          
+          "children": [
+
+          ]
+        },
+        {
+          "name": "PBI seven.",
+          "Id": "7",
+          "type": "Product Backlog item",
+          "size": "5",
+          "status": "ToDo",          
+          "children": [
+
+          ]
+        }
+      ]
+    }
+   ]
+}
