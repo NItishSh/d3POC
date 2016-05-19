@@ -166,7 +166,7 @@
 
             innergroup.append("path")
                 .attr("d", innerarc)
-                .attr("data-legend", function (d) {  return d.data.status })
+                .attr("data-legend", function (d) { return d.data.status })
                 .style("fill", function (d) { return color(d.data.status); })
                 .on("mouseover", function (d) {
                     div.transition()
@@ -175,11 +175,18 @@
                     div.html(d.data.name + "<br/>" + d.data.type)//html of a tootip
                         .style("left", (d3.event.pageX + 10) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
+                    var endAngle = d.endAngle + 0.2;
+                    var startAngle = d.startAngle - 0.2;
+                    
+                    var arcOver = d3.svg.arc().outerRadius(r3 + 9).innerRadius(r4-9);
+                    d3.select(this).transition().duration(1000).attr("d", arcOver);
+                    
                 })
                 .on("mouseout", function (d) {
                     div.transition()
                         .duration(500)
                         .style("opacity", 0);
+                    d3.select(this).transition().attr("d", innerarc).attr("stroke", "none");
                 })
                 .on("mousemove", function (d) {
                     div.style("left", (d3.event.pageX + 10) + "px")
