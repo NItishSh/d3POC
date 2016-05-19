@@ -7,14 +7,16 @@
       "Id": "1",
       "type": "Epic",
       "size": "",
-      "status": "",      
+      "status": "",
+      "url": "https://www.google.co.in/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=Epic+name",
       "children": [
         {
           "name": "PBI one.",
           "Id": "1",
           "type": "Product Backlog item",
           "size": "5",
-          "status": "Done",          
+          "status": "Done",
+          "url": "https://www.google.co.in/search?q=PBI+one.&oq=PBI+one.&aqs=chrome..69i57j0l5.845j0j9&sourceid=chrome&ie=UTF-8",
           "children": [
 
           ]
@@ -24,7 +26,8 @@
           "Id": "2",
           "type": "Product Backlog item",
           "size": "5",
-          "status": "ToDo",          
+          "status": "ToDo",
+          "url": "https://www.google.co.in/search?q=PBI+two.&oq=PBI+two.&aqs=chrome..69i57j0l2.599j0j9&sourceid=chrome&ie=UTF-8",
           "children": [
 
           ]
@@ -35,7 +38,7 @@
           "type": "Product Backlog item",
           "size": "5",
           "status": "In Progress",
-          
+          "url": "https://www.google.co.in/search?q=PBI+three.&oq=PBI+three.&aqs=chrome..69i57j0l3.359j0j9&sourceid=chrome&ie=UTF-8",
           "children": [
 
           ]
@@ -45,7 +48,8 @@
           "Id": "4",
           "type": "Product Backlog item",
           "size": "13",
-          "status": "Done",          
+          "status": "Done",
+          "url": "https://www.google.co.in/search?q=PBI+four.&oq=PBI+four.&aqs=chrome..69i57j0l5.606j0j9&sourceid=chrome&ie=UTF-8",
           "children": [
 
           ]
@@ -55,7 +59,8 @@
           "Id": "5",
           "type": "Product Backlog item",
           "size": "5",
-          "status": "Done",          
+          "status": "Done",
+          "url": "https://www.google.co.in/search?q=PBI+five.&oq=PBI+five.&aqs=chrome..69i57.2014j0j9&sourceid=chrome&ie=UTF-8",
           "children": [
 
           ]
@@ -65,7 +70,8 @@
           "Id": "6",
           "type": "Product Backlog item",
           "size": "5",
-          "status": "ToDo",          
+          "status": "ToDo",
+          "url": "https://www.google.co.in/search?q=PBI+six.&oq=PBI+six.&aqs=chrome..69i57j0l3.1408j0j9&sourceid=chrome&ie=UTF-8",
           "children": [
 
           ]
@@ -75,7 +81,8 @@
           "Id": "7",
           "type": "Product Backlog item",
           "size": "5",
-          "status": "ToDo",          
+          "status": "ToDo",
+          "url": "https://www.google.co.in/search?q=PBI+seven.&oq=PBI+seven.&aqs=chrome..69i57.343j0j9&sourceid=chrome&ie=UTF-8",
           "children": [
 
           ]

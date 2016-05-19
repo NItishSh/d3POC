@@ -12,6 +12,19 @@
             stroke: #fff;
             stroke-width: 3;
         }
+        div.tooltip {	
+    /*position: absolute;*/			
+    text-align: center;			
+    /*width: 60px;					
+    height: 28px;*/					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
     </style>
     <script>
         (function () {
@@ -98,6 +111,9 @@
             .attr("height", height)
           .append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        var div = d3.select("body").append("div")
+                    .attr("class", "tooltip")
+                    .style("opacity", 0);
 
         d3.json("Scripts/d3/flare.json", function (error, data) {
             if (error) throw error;
@@ -151,12 +167,54 @@
             innergroup.append("path")
                 .attr("d", innerarc)
                 .attr("data-legend", function (d) {  return d.data.status })
-                .style("fill", function (d) { return color(d.data.status); });//value to be passed to get the mapped/dynamic color .
+                .style("fill", function (d) { return color(d.data.status); })
+                .on("mouseover", function (d) {
+                    div.transition()
+                        .duration(200)
+                        .style("opacity", .9);
+                    div.html(d.data.name + "<br/>" + d.data.type)//html of a tootip
+                        .style("left", (d3.event.pageX + 10) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                })
+                .on("mouseout", function (d) {
+                    div.transition()
+                        .duration(500)
+                        .style("opacity", 0);
+                })
+                .on("mousemove", function (d) {
+                    div.style("left", (d3.event.pageX + 10) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                })
+                .on("click", function (d) {
+                    var win = window.open(d.data.url, '_blank');
+                    win.focus();
+                });
 
             innergroup.append("text")
                 .attr("transform", function (d) { return "translate(" + innerarc.centroid(d) + ")"; })
                 .attr("dy", ".35em")                
-                .text(function (d) { return d.data.name + "(" + d.data.status + ")"; });//text for the arc.
+                .text(function (d) { return d.data.Id; })//text for the arc.
+            .on("mouseover", function (d) {
+                div.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                div.html(d.data.name + "<br/>" + d.data.type)//html of a tootip
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
+            })
+                .on("mouseout", function (d) {
+                    div.transition()
+                        .duration(500)
+                        .style("opacity", 0);
+                })
+                .on("mousemove", function (d) {
+                    div.style("left", (d3.event.pageX + 10) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                })
+                .on("click", function (d) {
+                    var win = window.open(d.data.url, '_blank');
+                    win.focus();
+                });
 
             var legend = svg.append("g")
                     .attr("class", "legend")
